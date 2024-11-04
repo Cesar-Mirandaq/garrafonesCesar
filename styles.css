@@ -1,0 +1,217 @@
+* {
+    box-sizing: border-box; /* Ajusta el box model */
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; /* Fuente general */
+}
+
+body {
+    background-color: #fffcf2; /* Color de fondo suave */
+    color: #333; /* Color de texto */
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(90deg, #ff005a, #00aaff); /* Degradado de colores vibrantes */
+    padding: 30px; /* Espaciado interno */
+    text-align: center; /* Alineación central */
+    animation: fadeIn 0.5s; /* Animación de entrada */
+}
+
+h1 {
+    color: #ffffff; /* Color del texto del encabezado */
+    font-size: 4em; /* Tamaño del texto más grande */
+    text-shadow: 4px 4px 8px rgba(211, 197, 197, 0.8); /* Sombra más intensa del texto */
+    letter-spacing: 3px; /* Mayor espaciado entre letras */
+    transition: transform 0.3s; /* Transición para el efecto de elevación */
+}
+
+h1:hover {
+    transform: scale(1.1); /* Efecto de aumento al pasar el mouse */
+}
+
+/* Menú */
+.menu button {
+    background: linear-gradient(90deg, #ff005a, #00aaff); /* Degradado en el botón */
+    border: none; /* Sin borde */
+    border-radius: 10px; /* Bordes redondeados más marcados */
+    padding: 15px 30px; /* Aumento del espaciado interno */
+    margin: 0 10px; /* Margen horizontal */
+    cursor: pointer; /* Cursor de puntero */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transiciones mejoradas */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 1.2em; /* Tamaño de fuente más grande */
+}
+
+.menu button:hover {
+    background-color: #ff0080fe; /* Color al pasar el mouse */
+    transform: translateY(-3px); /* Efecto de elevación */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra al pasar el mouse */
+}
+
+/* Contenedor de Productos */
+#productos {
+    display: flex; /* Usar flexbox para productos */
+    flex-wrap: wrap; /* Permitir envoltura de elementos */
+    justify-content: center; /* Centrar productos */
+    margin: 30px; /* Margen alrededor */
+}
+
+/* Estilo de Cada Producto */
+.producto {
+    background-color: #ffffff; /* Fondo blanco para los productos */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra del producto más pronunciada */
+    margin: 20px; /* Margen alrededor del producto */
+    padding: 20px; /* Espaciado interno */
+    text-align: center; /* Alineación central del texto */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones */
+    width: 220px; /* Ancho del producto */
+}
+
+.producto:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Sombra más intensa al pasar el mouse */
+}
+
+.producto img {
+    max-width: 100%; /* Ancho máximo de la imagen */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+    transition: transform 0.3s; /* Transición para imagen */
+}
+
+.producto img:hover {
+    transform: scale(1.1); /* Efecto de aumento en la imagen al pasar el mouse */
+}
+
+/* Sección de Ofertas */
+#ofertas {
+    background-color: #ffe5e5; /* Fondo claro para ofertas */
+    padding: 30px; /* Espaciado interno */
+    text-align: center; /* Alineación central */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 30px; /* Margen alrededor */
+}
+
+.ofertas-list {
+    display: flex; /* Flexbox para ofertas */
+    justify-content: center; /* Centrar ofertas */
+    flex-wrap: wrap; /* Permitir envoltura de elementos */
+}
+
+.oferta {
+    background-color: #ffcccb; /* Fondo rosado para cada oferta */
+    border-radius: 12px; /* Bordes redondeados */
+    margin: 20px; /* Margen alrededor de la oferta */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra de la oferta */
+}
+
+/* Sección de Testimonios */
+#testimonios {
+    background-color: #f9f9f9; /* Fondo gris claro */
+    padding: 30px; /* Espaciado interno */
+    text-align: center; /* Alineación central */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 30px; /* Margen alrededor */
+}
+
+.testimonio {
+    margin: 20px 0; /* Margen vertical para testimonios */
+    font-style: italic; /* Estilo en cursiva */
+    color: #555; /* Color del texto de testimonios */
+}
+
+/* Sección de Contacto */
+#contacto {
+    padding: 30px; /* Espaciado interno */
+    text-align: center; /* Alineación central */
+}
+
+#contact-form {
+    display: flex; /* Flexbox para el formulario */
+    flex-direction: column; /* Colocar elementos en columna */
+    align-items: center; /* Alinear elementos al centro */
+}
+
+#contact-form input,
+#contact-form textarea {
+    margin: 15px; /* Margen vertical */
+    padding: 12px; /* Espaciado interno */
+    width: 80%; /* Ancho del campo */
+    max-width: 400px; /* Ancho máximo del campo */
+    border: 2px solid #00aaff; /* Borde azul */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: border-color 0.3s; /* Transición de borde */
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: #ff005a; /* Color de borde al enfocar */
+}
+
+/* Estilo de Modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Posicionamiento fijo */
+    z-index: 1; /* En la parte superior */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Desplazamiento automático */
+    background-color: rgba(255, 0, 90, 0.7); /* Fondo semitransparente */
+    animation: fadeIn 0.5s; /* Animación de entrada */
+}
+
+.modal-content {
+    background-color: #ffffff; /* Fondo blanco del modal */
+    margin: 10% auto; /* Centrado vertical y horizontal */
+    padding: 30px; /* Espaciado interno */
+    width: 80%; /* Ancho del modal */
+    border-radius: 12px; /* Bordes redondeados */
+}
+
+/* Botón de Cierre */
+.close {
+    color: rgb(255, 0, 90); /* Color del botón de cerrar */
+    float: right; /* Alineación a la derecha */
+    font-size: 28px; /* Tamaño del texto */
+    cursor: pointer; /* Cursor de puntero */
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Botón de Pago */
+#checkout-btn {
+    background: linear-gradient(90deg, #ff005a, #00aaff); /* Degradado vibrante */
+    border: none; /* Sin borde */
+    padding: 15px 30px; /* Aumento del espaciado interno */
+    border-radius: 10px; /* Bordes redondeados más marcados */
+    color: white; /* Color del texto */
+    cursor: pointer; /* Cursor de puntero */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transiciones mejoradas */
+    margin-top: 20px; /* Margen superior */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 1.2em; /* Tamaño de fuente más grande */
+}
+
+#checkout-btn:hover {
+    transform: translateY(-3px); /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra al pasar el mouse */
+}
+
+/* Pie de página */
+footer {
+    background-color: #00aaff; /* Fondo azul */
+    color: white; /* Color del texto */
+    text-align: center; /* Alineación central */
+    padding: 20px; /* Espaciado interno */
+    position: relative; /* Posición relativa */
+    bottom: 0; /* Al fondo */
+    width: 100%; /* Ancho completo */
+}
